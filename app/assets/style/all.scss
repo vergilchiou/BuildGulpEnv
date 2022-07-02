@@ -13,9 +13,10 @@ $color: #00cc99;
 .box {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: greenyellow;
   display: flex;
   transition: all 0.5s;
+
   &:hover {
     width: 200px;
     background-color: $color;
