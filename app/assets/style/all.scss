@@ -1,24 +1,945 @@
-$color: #00cc99;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-.header {
-  height: 200px;
-  background-color: #00cc99;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  ;
 }
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+img {
+  display: block;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: greenyellow;
+body {
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+/*  */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  /* max-width: 100%; */
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/*  */
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Layout */
+.d-flex {
   display: flex;
-  transition: all 0.5s;
+}
 
-  &:hover {
-    width: 200px;
-    background-color: $color;
+.flr-col {
+  flex-direction: column;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.tac {
+  text-align: center;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* Margin */
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+/* Padding */
+.pt-80 {
+  padding-top: 80px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+
+.pl-16 {
+  padding-left: 16px;
+}
+
+/* Text Color */
+.text-wh {
+  color: #ffffff;
+}
+
+.text-dr {
+  color: #650300;
+}
+
+.text-lr {
+  color: #AA0601;
+}
+
+.text-blk {
+  color: #000;
+}
+
+/* Font Size */
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-32 {
+  font-size: 32px;
+}
+
+.fz-36 {
+  font-size: 36px;
+}
+
+.fz-48 {
+  font-size: 48px;
+}
+
+.fz-64 {
+  font-size: 64px;
+}
+
+.fz-80 {
+  font-size: 84px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+hr {
+  margin: 0;
+  border-top: 0.5px;
+  border-bottom: 0.5px;
+  border-right: 0.5px;
+  border-left: 0.5px;
+
+}
+
+/*  */
+.container {
+  max-width: 1296px;
+  // max-width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #AA0601;
+}
+
+.logo {
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/logo-white.png");
+  background-size: cover;
+  width: 80px;
+  height: 48.57px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+/* Property of Part */
+
+/* HEADER */
+.header-nav {
+  width: 492px;
+}
+
+/* BANNER */
+.banner {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
+  height: calc(100vh - 80px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.banner>.container {
+  text-align: right;
+}
+
+.ai-e {
+  align-items: flex-end;
+}
+
+
+.buy-immed {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #AA0601;
+}
+
+/* SERVICE */
+.service {
+  background-color: #FBF2F2;
+}
+
+.service-items {
+  gap: 24px;
+}
+
+.service-card {
+  max-width: 24%;
+}
+
+/* CLASSICAL FRAME*/
+.classical-card {
+  width: 416px;
+}
+
+/* CO-BRAND */
+.co-brand {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
+  height: 608px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-double,
+.img-youth {
+  width: 648px;
+}
+
+.co-brand-card>h3 {
+  background-color: #ffffff;
+}
+
+/* RECOMMEND */
+.recommend-items {
+  gap: 0 24px;
+}
+
+.recommend-card {
+  width: 24%;
+}
+
+.contact {
+  background-color: #FBF2F2;
+}
+
+.contact>.container {
+  width: 636px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 6px 12px;
+  margin: 8px 0 16px;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+
+.checkbox {
+  display: flex;
+  gap: 4px;
+}
+
+.checkbox input {
+  width: 28px;
+  height: 14px;
+}
+
+.send-button {
+  /* display: block; */
+  background-color: #AA0601;
+  /* margin: 0 auto; */
+  /* width: 416px; */
+  padding: 16px 176px;
+}
+
+footer {
+  background-color: #AA0601;
+  padding: 60px 0 32px;
+}
+
+.f-nav {
+  gap: 0 48px;
+}
+
+.social-media {
+  gap: 0 32px;
+}
+
+.social-media img {
+  width: 48px;
+  height: 48px;
+}
+
+.f-contact {
+  padding: 32px 0 36px;
+  // border-bottom: 1px solid #fff;
+}
+
+.f-contact .material-symbols-outlined {
+  font-size: 48px;
+  margin-right: 16px;
+}
+
+.copy-right {
+  border-top: 1px solid #fff;
+}
+
+.copy-right ul {
+  gap: 0 48px;
+}
+
+/* 響應式部分 RWD PART */
+@media(max-width: 992px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .banner {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
+  }
+
+  /* SERVICE */
+  .service-card {
+    max-width: 48%;
+  }
+
+  .service-items {
+    flex-wrap: wrap;
+  }
+
+  /* CLASSICAL */
+  .classical-items {
+    flex-direction: column;
+  }
+
+  .classical-card {
+    width: 336px;
+  }
+
+  /* CO-BRAND */
+  .co-brand-items {
+    flex-wrap: wrap;
+    /*  */
+    justify-content: center;
+    gap: 24px 0;
+  }
+
+  .co-brand {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true");
+    height: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-double,
+  .img-youth {
+    /* width: 696px; */
+  }
+
+  /* RECOMMEND */
+  .recommend-items {
+    gap: 24px 24px;
+    flex-wrap: wrap;
+  }
+
+  .recommend-card {
+    width: 48%;
+  }
+
+  /* CONTACT US */
+  .contact>.container {
+    width: 576px;
+  }
+
+  .send-button {
+    padding: 16px 136px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 56px 0 40px;
+  }
+
+
+
+  .social-media {
+    gap: 0 16px;
+  }
+
+  .social-media img {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  @media(max-width: 767px) {
+    .fz-16 {
+      font-size: 16px;
+    }
+
+    .fz-24 {
+      font-size: 24px;
+    }
+
+    .container-header {
+      max-width: 100%;
+    }
+
+    .rwd-sm {
+      flex-direction: column;
+      gap: 16px 0;
+    }
+
+    header {
+      padding-bottom: 0;
+    }
+
+    .header-nav {
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: start;
+    }
+
+    .header-nav>li {
+      width: 50%;
+      font-size: 16px;
+      padding: 12px 0;
+      text-align: center;
+      border: 1px solid #ffffff;
+    }
+
+    .banner {
+      height: 396px;
+    }
+
+    .banner>.container {
+      padding: 144px 0;
+    }
+
+    /* SERVICE */
+    .service-card {
+      max-width: 100%;
+    }
+
+    .jc-c-sm {
+      justify-content: center;
+    }
+
+    .service-items {
+      flex-wrap: wrap;
+    }
+
+    /* CLASSICAL */
+    .classical-items {
+      flex-direction: column;
+    }
+
+    .classical-card {
+      width: 348px;
+    }
+
+    /* CO-BRAND */
+    .co-brand {
+      background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true");
+      height: 820px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 80px;
+    }
+
+    .img-double {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1.png?raw=true");
+      /* height: 240px; */
+    }
+
+    .img-youth {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2.png?raw=true");
+      /* height: 240px; */
+    }
+
+    /* RECOMMEND */
+    .recommend-items {
+      gap: 16px 0px;
+      flex-wrap: wrap;
+    }
+
+    .recommend-card {
+      width: 100%;
+    }
+
+    /* CONTACT US */
+    .contact>.container {
+      width: 348px;
+    }
+
+    .send-button {
+      padding: 16px 142px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 24px 0 24px;
+    }
+
+    .f-nav {
+      display: none;
+    }
+
+    .social-media img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .f-contact {
+      padding: 0 0 24px;
+    }
+
+    .f-contact .material-symbols-outlined {
+      font-size: 18px;
+      margin-right: 16px;
+    }
+
+    .f-contact p {
+      font-size: 16px;
+    }
+
+    .copy-right {
+      padding-top: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px 0;
+    }
+
+    .copy-right ul {
+      gap: 8px 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hidden-1 {
+      display: none;
+    }
+
+  }
+
+
+}
+
+
+@media(max-width: 414px) {
+  .co-brand {
+    padding: 40px 0;
+  }
+
+  .img-double {
+    content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true");
+    /* height: 240px; */
+  }
+
+  .img-youth {
+    content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true");
+    /* height: 240px; */
+  }
+
+}
+
+
+
+
+/* PRODUCTS */
+.prods-nav {
+  justify-content: center;
+}
+
+.prods-nav li {
+  width: 33.333%;
+}
+
+.prods-nav a {
+  padding: 24px 150px;
+  border: 1px solid #DCDCDC;
+  border-bottom: 8px solid transparent;
+}
+
+.prods-nav a:hover {
+  border-bottom: 8px solid #AA0601;
+}
+
+.prods-imgs-container h2 {
+  font-size: 42px;
+
+}
+
+.prods-imgs-container h3 {
+  font-size: 32px;
+}
+
+.prods-cards {
+  flex-wrap: wrap;
+  gap: 80px 24px;
+}
+
+.prod-card-optical {
+  width: 23%;
+}
+
+.prod-card-glasses {
+  width: 31.333%;
+}
+
+.color-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.box-color-1 {
+  background-color: #5F3E2D;
+}
+
+.box-color-2 {
+  background-color: #B75929;
+}
+
+.pages-button {
+  justify-content: center;
+}
+
+.pages-button li {
+  border: 1px solid #555555;
+}
+
+.pages-button li:not(:last-child) {
+  border-right: none;
+}
+
+.prev,
+.next {
+  padding: 11px 12px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #F2F2F2;
+}
+
+.page {
+  padding: 12px 16px;
+}
+
+.page:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* PRODUCTS */
+/* RWD */
+@media(max-width: 992px) {
+  .container {
+    max-width: 1296px;
+    padding: 0 36px;
+  }
+
+  .container-header {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .prods-container {
+    padding: 0;
+  }
+
+  .prods-container {
+    max-width: 100%;
+  }
+
+  .prods-nav li {
+    width: 33.333%;
+  }
+
+  .prods-nav a {
+    text-align: center;
+    font-size: 24px;
+    padding: 16px 48px;
+  }
+
+  .prod-card-optical,
+  .prod-card-glasses {
+    width: 48%;
+  }
+
+}
+
+@media(max-width: 767px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .container-header {
+    padding: 0;
+  }
+
+  .prods-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .optical-banner-1 {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true);
+  }
+
+  .optical-banner-2 {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true);
+  }
+
+  .sunglasses-banner-1 {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true);
+  }
+
+  .sunglasses-banner-2 {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true);
+  }
+
+  .prods-nav a {
+    text-align: center;
+    font-size: 16px;
+    padding: 16px 13px;
+  }
+
+  .prod-card-optical,
+  .prod-card-glasses {
+    width: 100%;
+  }
+
+  .prod-card-optical h4,
+  .prod-card-optical span,
+  .prod-card-glasses h4,
+  .prod-card-glasses span {
+    font-size: 24px;
+  }
+
+  .prods-imgs-container h2 {
+    margin-top: 40px;
+  }
+
+  .prods-imgs-container h3 {
+    margin-bottom: 24px;
+  }
+
+  .pages-button {
+    margin: 64px 0;
+  }
+
+  .page {
+    padding: 12px 12px;
   }
 }
