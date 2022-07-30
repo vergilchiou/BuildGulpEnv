@@ -758,8 +758,8 @@ footer {
   width: 33.333%;
 }
 
-.prods-nav a {
-  padding: 24px 150px;
+.prods-nav li a {
+  padding: 24px 0;
   border: 1px solid #DCDCDC;
   border-bottom: 8px solid transparent;
 }
@@ -818,7 +818,7 @@ footer {
 
 .prev,
 .next {
-  padding: 11px 12px;
+  padding: 12px 12px;
 }
 
 .prev:hover,
@@ -856,9 +856,6 @@ footer {
     max-width: 100%;
   }
 
-  .prods-nav li {
-    width: 33.333%;
-  }
 
   .prods-nav a {
     text-align: center;
