@@ -601,8 +601,8 @@ footer {
 .prods-nav li {
   width: 33.333%; }
 
-.prods-nav a {
-  padding: 24px 150px;
+.prods-nav li a {
+  padding: 24px 0;
   border: 1px solid #DCDCDC;
   border-bottom: 8px solid transparent; }
 
