@@ -143,8 +143,8 @@ table {
 }
 
 img {
-  /* max-width: 100%; */
-  width: 100%;
+  max-width: 100%;
+  // width: 100%;
   height: auto;
   vertical-align: middle;
 }
@@ -312,20 +312,11 @@ a {
   font-style: italic;
 }
 
-hr {
-  margin: 0;
-  border-top: 0.5px;
-  border-bottom: 0.5px;
-  border-right: 0.5px;
-  border-left: 0.5px;
-
-}
-
 /*  */
 .container {
   max-width: 1296px;
-  // max-width: 100%;
   margin: 0 auto;
+
 }
 
 header {
@@ -354,6 +345,7 @@ header {
 /* HEADER */
 .header-nav {
   width: 492px;
+  gap: 0 64px;
 }
 
 /* BANNER */
@@ -395,7 +387,8 @@ header {
 
 /* CLASSICAL FRAME*/
 .classical-card {
-  width: 416px;
+  // width: 416px;
+  width: 33.33%;
 }
 
 /* CO-BRAND */
@@ -409,7 +402,7 @@ header {
 
 .img-double,
 .img-youth {
-  width: 648px;
+  // width: 648px;
 }
 
 .co-brand-card>h3 {
@@ -430,7 +423,7 @@ header {
 }
 
 .contact>.container {
-  width: 636px;
+  max-width: 636px;
 }
 
 .contact input,
@@ -496,10 +489,11 @@ footer {
   gap: 0 48px;
 }
 
+
 /* 響應式部分 RWD PART */
 @media(max-width: 992px) {
   .container {
-    max-width: 90%;
+    max-width: 768px;
   }
 
   .banner {
@@ -521,7 +515,7 @@ footer {
   }
 
   .classical-card {
-    width: 336px;
+    max-width: 336px;
   }
 
   /* CO-BRAND */
@@ -556,7 +550,7 @@ footer {
 
   /* CONTACT US */
   .contact>.container {
-    width: 576px;
+    max-width: 576px;
   }
 
   .send-button {
@@ -605,7 +599,7 @@ footer {
     .header-nav {
       flex-wrap: wrap;
       width: 100%;
-      justify-content: start;
+      gap: 0;
     }
 
     .header-nav>li {
@@ -621,7 +615,7 @@ footer {
     }
 
     .banner>.container {
-      padding: 144px 0;
+      padding: 144px 14px;
     }
 
     /* SERVICE */
@@ -677,11 +671,12 @@ footer {
 
     /* CONTACT US */
     .contact>.container {
-      width: 348px;
+      padding: 0 14px 0 14px;
     }
 
     .send-button {
-      padding: 16px 142px;
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
 
     /* FOOTER */
@@ -849,8 +844,8 @@ footer {
   }
 
   .container-header {
-    max-width: 100%;
-    padding: 0;
+    // max-width: 100%;
+    // padding: 0;
   }
 
   .prods-container {
@@ -880,10 +875,12 @@ footer {
 
 @media(max-width: 767px) {
   .container {
+    max-width: 692px;
     padding: 0 14px;
   }
 
   .container-header {
+    max-width: 100%;
     padding: 0;
   }
 
